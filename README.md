@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Creadores de Soft Antigravity
 
-## Getting Started
+**Creadores de Soft Antigravity** es una plataforma moderna de presentación de productos de software empresarial, diseñada para mostrar el ecosistema de soluciones **CDS**, enfocadas en la digitalización y optimización de negocios en Argentina.
 
-First, run the development server:
+## 🛠️ Soluciones Incluidas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+El proyecto actúa como un catálogo avanzado para tres productos principales:
+
+### 🏨 CDS Hotelería
+Sistema integral para Hoteles, Aparts, Bungalows y Hoteles Boutique.
+- **Gestión de Reservas:** Motor de reservas online y calendario visual.
+- **Operaciones:** Check-in/out digital, Housekeeping y Channel Manager.
+- **Administración:** Facturación electrónica AFIP y Analytics de KPIs hoteleros.
+
+### 📄 Facturalo Simple
+Solución de facturación electrónica ágil para Monotributistas e Inscriptos.
+- **Simplicidad:** Emisión de comprobantes A, B, C y M en segundos.
+- **Control:** Gestión de stock en tiempo real y reportes de ventas.
+- **Accesibilidad:** 100% web, sin dependencias de instalaciones locales.
+
+### 🎓 CDS Academias
+(Plataforma de gestión educativa y formación profesional).
+
+## 🚀 Stack Tecnológico
+
+El proyecto está construido con las últimas versiones de las tecnologías líderes en el ecosistema frontend:
+
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Librería UI:** [React 19](https://react.dev/)
+- **Estilos:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Lenguaje:** [TypeScript](https://www.typescriptlang.org/)
+- **Despliegue:** [Vercel](https://vercel.com/)
+
+## 📦 Estructura del Proyecto
+
+```text
+├── public/             # Assets visuales (mockups, fondos)
+├── src/
+│   ├── app/            # Rutas y páginas (App Router)
+│   │   ├── cds-academias/
+│   │   ├── cds-facturalo-simple/
+│   │   └── cds-hoteleria/
+│   ├── components/     # Componentes UI reutilizables
+│   └── lib/            # Datos mock y utilidades (data.ts)
+└── package.json        # Dependencias y scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Instalación y Desarrollo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/TU_USUARIO/creadores-de-soft-antigravity.git
+   cd creadores-de-soft-antigravity
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Ejecutar en modo desarrollo:**
+   ```bash
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Abrir el navegador:**
+   Visita [http://localhost:3000](http://localhost:3000)

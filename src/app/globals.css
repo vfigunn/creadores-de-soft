@@ -1,26 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap');
 @import "tailwindcss";
 
+/* ===== DESIGN TOKENS ===== */
 :root {
-  --background: #ffffff;
+  /* Corporate - Naranja + Azul */
+  --corp-primary: #E8600A;
+  --corp-primary-light: #FF8533;
+  --corp-primary-dark: #C44E00;
+  --corp-secondary: #1A365D;
+  --corp-secondary-light: #2A4A7F;
+  --corp-accent: #F59E0B;
+
+  /* Hotelería - Púrpura (creadoresdesoft.com.ar) */
+  --hotel-primary: #5E00A3;
+  --hotel-primary-light: #7B1FA2;
+  --hotel-primary-dark: #4A0082;
+  --hotel-accent: #CE93D8;
+  --hotel-surface: #F3E5F6;
+
+  /* Facturalo Simple - Azul/Slate (facturalosimple.com.ar) */
+  --factura-primary: #2779BD;
+  --factura-primary-light: #4299E1;
+  --factura-primary-dark: #1A5D99;
+  --factura-accent: #90CDF4;
+  --factura-surface: #EBF8FF;
+
+  /* Academias - Azules oscuros */
+  --academia-primary: #1E3A5F;
+  --academia-primary-light: #2D5A8E;
+  --academia-primary-dark: #0F2744;
+  --academia-accent: #60A5FA;
+  --academia-surface: #EFF6FF;
+
+  /* Neutrals */
+  --neutral-50: #FAFAFA;
+  --neutral-100: #F5F5F5;
+  --neutral-200: #E5E5E5;
+  --neutral-300: #D4D4D4;
+  --neutral-400: #A3A3A3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+
+  --background: #FFFFFF;
   --foreground: #171717;
+  --radius: 12px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: 'Open Sans', system-ui, sans-serif;
+  --font-display: 'Roboto', system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ===== GLOBAL RESETS ===== */
+* {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+/* Staggered delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* ===== GLASS MORPHISM ===== */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(23, 23, 23, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--neutral-300);
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neutral-400);
+}
+
+/* ===== PRODUCT THEME SYSTEM ===== */
+[data-theme="hoteleria"] {
+  --product-primary: var(--hotel-primary);
+  --product-primary-light: var(--hotel-primary-light);
+  --product-primary-dark: var(--hotel-primary-dark);
+  --product-accent: var(--hotel-accent);
+  --product-surface: var(--hotel-surface);
+}
+
+[data-theme="facturalo-simple"] {
+  --product-primary: var(--factura-primary);
+  --product-primary-light: var(--factura-primary-light);
+  --product-primary-dark: var(--factura-primary-dark);
+  --product-accent: var(--factura-accent);
+  --product-surface: var(--factura-surface);
+}
+
+[data-theme="academias"] {
+  --product-primary: var(--academia-primary);
+  --product-primary-light: var(--academia-primary-light);
+  --product-primary-dark: var(--academia-primary-dark);
+  --product-accent: var(--academia-accent);
+  --product-surface: var(--academia-surface);
 }
