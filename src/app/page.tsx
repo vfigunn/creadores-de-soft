@@ -12,6 +12,7 @@ const productGradients: Record<string, { from: string; to: string }> = {
   "cds-hoteleria": { from: "#7C3AED", to: "#A78BFA" },
   "cds-facturalo-simple": { from: "#0EA5E9", to: "#38BDF8" },
   "cds-academias": { from: "#1E3A5F", to: "#2D5A8E" },
+  "cds-cooperativas": { from: "#44693D", to: "#608f58" },
 };
 
 const whyUs = [

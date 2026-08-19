@@ -2,7 +2,7 @@
 // CREADORES DE SOFT — Mock Data
 // ===================================================================
 
-export type ProductSlug = "cds-hoteleria" | "cds-facturalo-simple" | "cds-academias";
+export type ProductSlug = "cds-hoteleria" | "cds-facturalo-simple" | "cds-academias" | "cds-cooperativas";
 
 export interface Module {
   slug: string;
@@ -1081,15 +1081,323 @@ const academias: Product = {
 };
 
 // ===================================================================
+// COOPERATIVAS
+// ===================================================================
+const cooperativas: Product = {
+  slug: "cds-cooperativas",
+  routeBase: "/cds-cooperativas",
+  name: "CDS Cooperativas",
+  tagline: "Gestión para cooperativas",
+  description:
+    "Software de gestión integral para cooperativas. Administra socios, aportes, servicios y asambleas en una plataforma segura y fácil de usar.",
+  heroTitle: "La plataforma que tu cooperativa necesita",
+  heroSubtitle:
+    "Optimiza la administración de tu cooperativa con herramientas modernas. Control total sobre asociados, aportes de capital y servicios prestados.",
+  theme: "cooperativas",
+  primaryColor: "#44693D",
+  icon: "🤝",
+  benefits: [
+    {
+      title: "Gestión de Socios",
+      description:
+        "Administración centralizada de asociados, historial de aportes y participación en asambleas.",
+      icon: "👥",
+    },
+    {
+      title: "Control de Aportes",
+      description:
+        "Seguimiento de aportes de capital, cuotas sociales y facturación de servicios con múltiples medios de pago.",
+      icon: "💰",
+    },
+    {
+      title: "Asambleas Virtuales",
+      description:
+        "Organización de asambleas, votaciones electrónicas seguras y registro de actas digitales.",
+      icon: "🏛️",
+    },
+    {
+      title: "Transparencia Total",
+      description:
+        "Portal de autogestión para asociados con acceso a estados de cuenta, memorias y balances.",
+      icon: "🔍",
+    },
+  ],
+  modules: [
+    {
+      slug: "gestion-asociados",
+      name: "Gestión de Asociados",
+      shortDescription:
+        "Padrón completo de socios con historial y categorización.",
+      description:
+        "Mantené un registro detallado de todos los asociados, fechas de ingreso, categorías, estados de cuenta y documentación respaldatoria. Sistema de altas y bajas simplificado.",
+      icon: "👥",
+      features: [
+        "Padrón digital actualizado",
+        "Categorización de socios",
+        "Gestión documental",
+        "Historial de participación",
+        "Carnet digital",
+        "Proceso de admisión online",
+      ],
+    },
+    {
+      slug: "aportes-capital",
+      name: "Aportes y Cuotas",
+      shortDescription:
+        "Control de aportes de capital y cuotas sociales.",
+      description:
+        "Automatizá la emisión de cuotas sociales y el registro de aportes de capital. Conciliación bancaria integrada, notificaciones de vencimiento y cálculo de excedentes.",
+      icon: "💰",
+      features: [
+        "Emisión masiva de cuotas",
+        "Registro de aportes de capital",
+        "Cálculo de excedentes",
+        "Conciliación bancaria",
+        "Recordatorios automáticos",
+        "Múltiples medios de pago",
+      ],
+    },
+    {
+      slug: "servicios",
+      name: "Servicios al Asociado",
+      shortDescription:
+        "Facturación y gestión de servicios prestados por la cooperativa.",
+      description:
+        "Módulo flexible para gestionar diferentes tipos de servicios (créditos, proveeduría, seguros, etc.). Facturación electrónica integrada y control de consumo.",
+      icon: "🛠️",
+      features: [
+        "Facturación electrónica",
+        "Gestión de servicios múltiples",
+        "Control de consumo",
+        "Gestión de créditos",
+        "Convenios especiales",
+        "Reportes de rentabilidad",
+      ],
+    },
+    {
+      slug: "asambleas",
+      name: "Asambleas y Votaciones",
+      shortDescription:
+        "Herramientas para asambleas ordinarias y extraordinarias.",
+      description:
+        "Organizá asambleas presenciales o virtuales. Sistema de acreditación, votación electrónica segura y secreta, y generación automática de actas.",
+      icon: "🏛️",
+      features: [
+        "Convocatorias digitales",
+        "Acreditación de socios habilitados",
+        "Votación electrónica segura",
+        "Cálculo automático de quórum",
+        "Generación de actas",
+        "Archivo histórico de asambleas",
+      ],
+    },
+    {
+      slug: "portal-asociado",
+      name: "Portal del Asociado",
+      shortDescription:
+        "Autogestión y transparencia para los miembros.",
+      description:
+        "Cada asociado accede a su panel privado para ver estado de cuenta, realizar pagos, descargar comprobantes, actualizar datos y participar en votaciones.",
+      icon: "📱",
+      features: [
+        "Estado de cuenta en tiempo real",
+        "Pagos online",
+        "Descarga de comprobantes",
+        "Actualización de datos",
+        "Participación en votaciones",
+        "Buzón de sugerencias",
+      ],
+    },
+    {
+      slug: "contabilidad",
+      name: "Gestión Contable",
+      shortDescription:
+        "Contabilidad adaptada a normativas cooperativas.",
+      description:
+        "Módulo contable con plan de cuentas específico para cooperativas. Emisión de balances, memorias, y reportes para INAES y AFIP.",
+      icon: "📊",
+      features: [
+        "Plan de cuentas cooperativo",
+        "Libro diario y mayor",
+        "Emisión de balances",
+        "Reportes INAES",
+        "Liquidación de excedentes",
+        "Exportación contable",
+      ],
+    },
+  ],
+  types: [
+    {
+      slug: "cooperativas-trabajo",
+      name: "Cooperativas de Trabajo",
+      shortDescription:
+        "Gestión específica para cooperativas de trabajo y servicios.",
+      description:
+        "Administración de horas trabajadas, distribución de retornos, liquidación de anticipos y gestión de proyectos para cooperativas de trabajo.",
+      icon: "👷",
+      features: [
+        "Registro de horas/producción",
+        "Liquidación de anticipos",
+        "Distribución de retornos",
+        "Gestión de proyectos",
+        "Evaluación de desempeño",
+        "Control de asistencia",
+      ],
+    },
+    {
+      slug: "cooperativas-servicios-publicos",
+      name: "Servicios Públicos",
+      shortDescription:
+        "Para cooperativas eléctricas, de agua o telecomunicaciones.",
+      description:
+        "Facturación masiva de servicios, lectura de medidores, gestión de cortes y reconexiones, y atención de reclamos técnicos.",
+      icon: "⚡",
+      features: [
+        "Facturación por consumos",
+        "App para toma de lecturas",
+        "Gestión de cortes/reconexiones",
+        "Sistema de reclamos (ticketing)",
+        "Cuadros tarifarios complejos",
+        "Puntos de cobro externos",
+      ],
+    },
+    {
+      slug: "cooperativas-agropecuarias",
+      name: "Cooperativas Agropecuarias",
+      shortDescription:
+        "Soluciones para acopio, comercialización y provisión de insumos.",
+      description:
+        "Gestión de acopio de granos/producción, liquidaciones agropecuarias, canje por insumos, y cuentas corrientes granarias.",
+      icon: "🌾",
+      features: [
+        "Gestión de acopio",
+        "Liquidaciones agropecuarias",
+        "Operaciones de canje",
+        "Provisión de insumos",
+        "Cuentas corrientes bimonetarias",
+        "Trazabilidad de producción",
+      ],
+    },
+  ],
+  pricing: [
+    {
+      name: "Inicial",
+      price: "$29.900",
+      period: "/mes",
+      description: "Para cooperativas de hasta 50 asociados",
+      features: [
+        "Hasta 50 asociados",
+        "Gestión de padrón",
+        "Emisión de cuotas",
+        "Portal del asociado básico",
+        "2 usuarios administrativos",
+        "Soporte por email",
+      ],
+      highlighted: false,
+      cta: "Comenzar prueba gratis",
+    },
+    {
+      name: "Crecimiento",
+      price: "$59.900",
+      period: "/mes",
+      description: "Para cooperativas de hasta 300 asociados",
+      features: [
+        "Hasta 300 asociados",
+        "Todo lo de Inicial",
+        "Módulo de asambleas",
+        "Módulo de servicios",
+        "5 usuarios",
+        "Soporte prioritario",
+      ],
+      highlighted: true,
+      cta: "Comenzar prueba gratis",
+    },
+    {
+      name: "Desarrollo",
+      price: "Personalizado",
+      period: "",
+      description: "Para grandes cooperativas y federaciones",
+      features: [
+        "Asociados ilimitados",
+        "Todo lo de Crecimiento",
+        "Contabilidad completa",
+        "API para integraciones",
+        "Usuarios ilimitados",
+        "Desarrollos a medida",
+        "Account manager dedicado",
+      ],
+      highlighted: false,
+      cta: "Contactar ventas",
+    },
+  ],
+  blog: [
+    {
+      slug: "digitalizacion-cooperativas-2025",
+      title: "La transformación digital en el sector cooperativo",
+      excerpt:
+        "Cómo las herramientas digitales están ayudando a las cooperativas a mejorar la participación y transparencia.",
+      date: "2025-02-15",
+      author: "Equipo CDS Cooperativas",
+      category: "Innovación",
+      readTime: "7 min",
+    },
+    {
+      slug: "asambleas-virtuales-legales",
+      title: "Asambleas virtuales: marco legal y mejores prácticas",
+      excerpt:
+        "Todo lo que necesitas saber para organizar asambleas a distancia cumpliendo con las normativas del INAES.",
+      date: "2025-01-20",
+      author: "Dra. Laura Gómez",
+      category: "Legal",
+      readTime: "9 min",
+    },
+    {
+      slug: "aumentar-participacion-socios",
+      title: "Estrategias para aumentar la participación de los asociados",
+      excerpt:
+        "Técnicas comprobadas para fomentar el involucramiento de los socios en la vida institucional de la cooperativa.",
+      date: "2024-12-10",
+      author: "Carlos Méndez",
+      category: "Gestión",
+      readTime: "6 min",
+    },
+  ],
+  learning: [
+    {
+      title: "Primeros pasos en CDS Cooperativas",
+      description: "Aprende a configurar tu cooperativa, importar el padrón y dar de alta usuarios.",
+      type: "tutorial",
+      duration: "25 min",
+      level: "Principiante",
+    },
+    {
+      title: "Gestión de Aportes y Cobranzas",
+      description: "Configura cuotas sociales, procesa pagos y realiza el seguimiento de morosidad.",
+      type: "guía",
+      duration: "15 min",
+      level: "Intermedio",
+    },
+    {
+      title: "Organización de Asambleas Digitales",
+      description: "Paso a paso para convocar, acreditar y realizar votaciones electrónicas.",
+      type: "video",
+      duration: "30 min",
+      level: "Avanzado",
+    },
+  ],
+};
+
+// ===================================================================
 // PRODUCT MAP & HELPERS
 // ===================================================================
 export const products: Record<string, Product> = {
   "cds-hoteleria": hoteleria,
   "cds-facturalo-simple": facturaloSimple,
   "cds-academias": academias,
+  "cds-cooperativas": cooperativas,
 };
 
-export const productList: Product[] = [hoteleria, facturaloSimple, academias];
+export const productList: Product[] = [hoteleria, facturaloSimple, academias, cooperativas];
 
 export function getProduct(slug: string): Product | undefined {
   return products[slug];
