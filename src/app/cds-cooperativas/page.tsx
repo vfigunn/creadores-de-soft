@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function CooperativasPage() {
-  return <ProductHomeContent product={product} bgImage="/backgrounds/corp.png" />;
+  return <ProductHomeContent product={product} bgImage="/backgrounds/cooperativas.png" />;
 }
