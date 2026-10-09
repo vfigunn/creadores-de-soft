@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function HoteleriaPage() {
-  return <ProductHomeContent product={product} bgImage="/backgrounds/hotel.png" />;
+  return <ProductHomeContent product={product} bgImage="/backgrounds/restaurantes.png" />;
 }
